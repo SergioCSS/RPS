@@ -11,38 +11,39 @@
     <script>
 
         function computerPlay() {
-            let choice = Math.floor(Math.random() * 3);
+            let choice = Math.floor(Math.random() * 3) + 1;
 
-            if (choice === 0) {
+            if (choice == 1) {
                 return "Rock";
             } else if
-                (choice === 1) {
+                (choice == 2) {
                     return "Paper";
             } else {
                 return "Scissors";
             }
+
         }
 
-        const computerSelection = computerPlay;
-        const playerSelection = "";
+        const computerSelection = computerPlay();
 
-        function playRound(computerPlay, playerSelection) {
-            
-            if (computerPlay == playerSelection) {
-                return "No winner found, just two losers seeing each other.";
-            } else if (computerPlay == "Rock" && playerSelection == "Paper") {
-                return "You win, buh."
-            } else if (computerPlay == "Paper" && playerSelection == "Scissors") {
-                return "You win, buh."
-            } else if (computerPlay == "Scissors" && playerSelection == "Rock") {
-                return "You win, buh."
-            } else if (computerPlay == "Paper" && playerSelection == "Rock") {
-                return "You lose loser."
-            } else if (computerPlay == "Scissors" && playerSelection == "Paper") {
-                return "You lose loser."
-            } else if (computerPlay == "Rock" && playerSelection == "Scissors") {
-                return "You lose loser."
-            } 
+        function playRound(playerSelection) {
+
+            if (computerSelection === playerSelection) {
+                return "No winner found, just two losers lokking at each other.";
+            } else if (computerSelection === "Rock" && playerSelection == "Paper") {
+                return "You win, buh.";
+            } else if (computerSelection === "Paper" && playerSelection == "Scissors") {
+                return "You win, buh.";
+            } else if (computerSelection === "Scissors" && playerSelection == "Rock") {
+                return "You win, buh.";
+            } else if (computerSelection === "Paper" && playerSelection == "Rock") {
+                return "You lose loser.";
+            } else if (computerSelection === "Scissors" && playerSelection == "Paper") {
+                return "You lose loser.";
+            } else if (computerSelection === "Rock" && playerSelection == "Scissors") {
+                return "You lose loser.";
+            } else { return "Invalid";
+            }
 
         }
     
