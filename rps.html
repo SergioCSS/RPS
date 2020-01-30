@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> 
+        ROCK PAPER SCISSORS
+    </title>
+</head>
+<body>
+
+    <script>
+
+        function computerPlay() {
+            let choice = Math.floor(Math.random() * 3);
+
+            if (choice === 0) {
+                return "Rock";
+            } else if
+                (choice === 1) {
+                    return "Paper";
+            } else {
+                return "Scissors";
+            }
+        }
+
+        const computerSelection = computerPlay;
+        const playerSelection = "";
+
+        function playRound(computerPlay, playerSelection) {
+            
+            if (computerPlay == playerSelection) {
+                return "No winner found, just two losers seeing each other.";
+            } else if (computerPlay == "Rock" && playerSelection == "Paper") {
+                return "You win, buh."
+            } else if (computerPlay == "Paper" && playerSelection == "Scissors") {
+                return "You win, buh."
+            } else if (computerPlay == "Scissors" && playerSelection == "Rock") {
+                return "You win, buh."
+            } else if (computerPlay == "Paper" && playerSelection == "Rock") {
+                return "You lose loser."
+            } else if (computerPlay == "Scissors" && playerSelection == "Paper") {
+                return "You lose loser."
+            } else if (computerPlay == "Rock" && playerSelection == "Scissors") {
+                return "You lose loser."
+            } 
+
+        }
+    
+    </script>
+
+    
+</body>
+</html>
